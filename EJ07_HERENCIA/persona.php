@@ -5,10 +5,19 @@
     {
         protected $dni;
 
-        public function __construct($nombre, $edad, $dni) 
+        // public function __construct($nombre, $edad, $dni) 
+        // {
+        //     parent::__construct($nombre, $edad);
+        //     $this->dni = $dni;        
+        // }
+        
+        public function getDni() 
         {
-            parent::__construct($nombre, $edad);
-            $this->dni = $dni;        
+            return $this->dni;
+        }
+        public function setDni($dni) 
+        {
+            $this->dni = $dni;
         }
 
         function retornarJSON()

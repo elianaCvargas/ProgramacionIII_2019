@@ -13,10 +13,7 @@
     {
          echo $ex->getMessage();
     }
-    // include("save_file.php");
-    // $miArchivo = new File();
-    // $miArchivo->save_file("asd","asd");
-      //var_dump($miAlumno);
+
 ?>
 
 

@@ -18,7 +18,7 @@
                         $miAlumno
                 );
             
-                $fp = fopen('Datos.csv', 'wb');
+                $fp = fopen('Datos.csv', 'a+');
                 if($data != null)
                 {
                     foreach ( $data as $line ) 

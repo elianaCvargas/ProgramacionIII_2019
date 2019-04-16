@@ -1,6 +1,7 @@
 <?php
     include_once("alumno.php");
     include("save_file.php");
+    //include("AccesoDatos.php");
     
     if (isset($_POST['Nombre']) &&
         isset($_POST['Edad']) &&
@@ -18,8 +19,16 @@
         else
         {
             echo "the variables were setted successfully: \n";
-            $miAlumno = new Alumno($nombre, $edad, $dni, $legajo);
+            //$miAlumno = new Alumno($nombre, $edad, $dni, $legajo);
+            $miAlumno = new Alumno();
+            
+            $miAlumno->setNombre($nombre); 
+            $miAlumno->setEdad($edad);
+            $miAlumno->setDni($dni);
+            $miAlumno->setLegajo($legajo);      
+            $miAlumno->Insertar();
             $miArchivo = new File();
+
 
         }
     }
